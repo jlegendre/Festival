@@ -25,11 +25,13 @@ for ($i = 0; $i < count($arrayGroupe); $i++) {
 		<tr class='ligneTabNonQuad'>
          <td width='52%'>" . $unGroupe->getNom() . "</td>
          
-         <td width='16%' align='center'> 
-         <a href='cGestionGroupes.php?action=detailGroupe&id=" . $unGroupe->getId() . "'>
+         <td width='16%' align='center'>";
+    if (isset($_SESSION['pseudo']) && $privil == '1') {
+        echo "<a href='cGestionGroupes.php?action=detailGroupe&id=" . $unGroupe->getId() . "'>
          Voir détail</a></td>
          
          <td width='16%' align='center'>";
+    }
     if (isset($_SESSION['pseudo']) && $privil == '1') {
         echo "<a href='cGestionGroupes.php?action=demanderModifierGroupe&id=" . $unGroupe->getId() . "'>
          Modifier</a></td>";
@@ -40,14 +42,14 @@ for ($i = 0; $i < count($arrayGroupe); $i++) {
             <a href='cGestionGroupes.php?action=demanderSupprimerGroupe&id=" . $unGroupe->getId() . "'>
             Supprimer</a></td>";
     }
-        echo "
+    echo "
       </tr>";
-    }
+}
+if (isset($_SESSION['pseudo']) && $privil == '1') {
     echo "
 </table>
 <br>
 <a href='cGestionGroupes.php?action=demanderCreerGroupes'>
 Création d'un Groupe</a >";
-
-    include("_fin.inc.php");
-    
+}
+include("_fin.inc.php");

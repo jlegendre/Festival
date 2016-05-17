@@ -5,7 +5,14 @@
 {
    background-color:#FFDD88;
    color:black;
-   font:11px Arial, Helvetica, sans-serif;
+   font:12px Arial, Helvetica, sans-serif;
+}
+
+label {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 5;
+    font-weight: 700;
 }
 
 /* Style pour le titre (couleur du texte : rouge) */
@@ -13,14 +20,14 @@
 {
    background-color:#FFDD88;
    color:#F50033;
-   font:30px Arial, Helvetica, sans-serif;
+   font:30px Calibri, Helvetica, sans-serif;
    text-align:center;
 }
 
 /* Style pour le texte de 2ème niveau du titre */
 .texteNiveau2
 {
-   font:20px Arial, Helvetica, sans-serif;
+   font:20px Calibri, Helvetica, sans-serif;
 }
 
 /* Style pour le texte associé à l'onglet Accueil (couleur : bleu foncé avec 
@@ -36,10 +43,10 @@ mise en gras et en italique) */
 }
 
 /* Style pour le texte dans les différentes balises citées */
-td,tr,div,p 
+/*td,tr,div,p 
 {
    font:11px Arial, Helvetica, sans-serif;
-}
+}*/
 
 /* STYLES POUR LES TABLEAUX QUADRILLÉS */
 
